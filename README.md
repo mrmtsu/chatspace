@@ -40,10 +40,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-### Association
-- has_many :users
+
 - has_many :messages
 - has_many :users_groups
 - has_many :users, though: :users_groups
