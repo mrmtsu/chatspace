@@ -1,0 +1,19 @@
+.side-bar
+  .side-header
+    .side-header__box
+      .side-header__box__user-name
+        masa
+      .side-header__box__menu
+        .side-header__box__menu__left
+        = link_to "#", class: "side-header__box__menu__left__btn--edit" do
+          = icon('fas', 'edit')
+        .side-header__box__menu__right
+        = link_to "#", class: "side-header__box__menu__right__btn--cog" do
+          = icon('fas', 'cog')
+  
+  .groups
+    .groups__new
+      .groups__new__name
+        techcmap
+      .groups__new__text
+        まだメッセージはありません
