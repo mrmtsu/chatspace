@@ -1,0 +1,47 @@
+.chat-main
+
+  .main-header
+    .main-header__left
+      .main-header__left__title
+        test
+      .main-header__left__title__name
+        Member : masa
+    .main-header__right
+      = link_to "Edit", "#", class: "main-header__right__btn--edit"
+
+  .main-center
+    .main-center__date
+      .main-center__date__posts
+        .main-center__date__posts__title
+          masa
+        .main-center__date__posts__name
+          2019/11/20(Wed) 17:43:01
+      .main-center__date__text
+        おはよう!
+    
+    .main-center__date2
+      .main-center__date2__posts2
+        .main-center__date2__posts2__title2
+          masa
+        .main-center__date2__posts2__name2
+          2019/11/20(Wed) 18:00:00
+      .main-center__date2__text2
+        おはよう!
+    
+    .main-center__date3
+      .main-center__date3__posts3
+        .main-center__date3__posts3__title3
+          masa
+        .main-center__date3__posts3__name3
+          2019/11/20(Wed) 19:00:00
+      .main-center__date3__text3
+        おはよう!
+
+  .main-bottom
+    .main-bottom__message
+      .main-bottom__message__text
+        %input.main-bottom__message__text__post{:name => "text", :placeholder => "type a message", :type => "text", :value => ""}/
+        %label{class: "main-bottom__message__text__image", for: "message_image"}
+          = icon('fas', 'image')
+          %input{class: "main-bottom__message__text__image__file", type: "file", name: "massage[image]", id: "message_image"}
+      %input{type: "submit", name: "coment", value: "Send", class: "submit-btn"}
