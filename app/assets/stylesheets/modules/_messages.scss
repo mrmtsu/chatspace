@@ -117,9 +117,10 @@
   height: calc(100vh - 100px - 90px);
   background-color: #fafafa;
   padding: 35px 40px;
+  overflow: scroll;
 }
 .messages__date {
-  padding-bottom: 40px;
+  // padding-bottom: 40px;
   &__posts {
     margin: 0 0 12px 0;
     display: flex;
@@ -134,9 +135,13 @@
       margin-left: 10px;
     }
   }
-  &__text {
-    font-size: 14px;
-    color: #434A54;
+  .lower-message {
+    margin-top: 10px;
+    &__content {
+      color: #434a54;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
   }
 }
 
