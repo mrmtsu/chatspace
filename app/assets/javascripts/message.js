@@ -17,9 +17,6 @@ $(function(){
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       }
     })
-    .fail(function() {
-      console.log('error');
-    });
   };
   function buildHTML(message){
    if ( message.image ) {
