@@ -1,4 +1,6 @@
 $(function() {
+  var user_ids = []
+  user_ids.push(`${useId}`);
   function addUser(user) {
     let html = `
       <div class="chat-group-user clearfix">
@@ -42,7 +44,10 @@ $(function() {
 
         if (users.length !== 0) {
           users.forEach(function(user) {
+            if (userId !== 0) {
+            var arr = user_ids.indexOf(`#${userId}`);
             addUser(user);
+            }
           });
         } else if (input.length == 0) {
           return false;
@@ -55,7 +60,6 @@ $(function() {
       });
   });
   $(document).on("click", ".chat-group-user__btn--add", function() {
-    console.log
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this)
@@ -63,6 +67,7 @@ $(function() {
       .remove();
     addDeleteUser(userName, userId);
     addMember(userId);
+    searchResult.empty(); 
   });
   $(document).on("click", ".chat-group-user__btn--remove", function() {
     $(this)
